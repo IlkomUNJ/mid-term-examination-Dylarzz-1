@@ -42,5 +42,11 @@ private:
     QVector<QPoint> m_points;
 
     bool isPaintLinesClicked = false;
+
+    bool isSegmentDetectionClicked = false;
+    QVector<QPoint> segmentCandidates;
+
+    bool matchesPattern(bool window[3][3], const std::vector<std::vector<std::vector<bool>>> &patterns);
+
 };
 #endif // DRAWINGCANVAS_H
